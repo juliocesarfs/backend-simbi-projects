@@ -1,0 +1,55 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Projetos Rouanet API Documentation",
+        "description": "Projetos Rouanet API",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080",
+            "description": "server local"
+        }
+    ],
+    "paths": {
+        "/api/project/rouanet": {
+            "get": {
+                "summary": "Listar todos os Projetos Rouanet com paginação opcional",
+                "operationId": "73b31eccadf76fdfff469d30862047de",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "número da página",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 0
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "itens por página",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "nullable": true
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Projetos retornados com sucesso"
+                    },
+                    "400": {
+                        "description": "Parametros inválidos"
+                    },
+                    "500": {
+                        "description": "Erro interno no servidor"
+                    }
+                }
+            }
+        }
+    }
+}
