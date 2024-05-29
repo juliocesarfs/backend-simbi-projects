@@ -11,6 +11,8 @@ Na pasta raiz, execute os seguintes comandos para rodar o projeto:
 - ```docker exec setup-php php artisan migrate```
 
 
+Caso não queira usar o Docker, terá que realizar a configuração e conexão do banco de dados manualmente.
+
 Qualquer erro estou a disposição!
 ## **Link documentação Swagger**
 
